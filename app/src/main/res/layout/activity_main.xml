@@ -1,69 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightblue"
+    android:background="@color/lightcyan"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clipboard"
-        android:textColor="@color/gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="COPY"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="243dp" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="164dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="416dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PASTE"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="482dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:textColor="@color/maroon"
-        android:textSize=""
         android:text="CLIPBOARD APPLICATION"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="53dp" />
+        android:textColor="@color/maroon"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:textSize="30sp" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:onClick="copyData"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:text="COPY"
+        android:textColor="@color/darkgreen"
+        android:background="@color/lightgreen"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@color/darkgreen"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_centerInParent="true"
+        android:layout_below="@id/textView2"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/darkgreen"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/button"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PASTE"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/darkgreen"
+        android:background="@color/lightgreen"
+        android:onClick="pasteData"
+        android:layout_below="@id/editText2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clipboard"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/gray"
+        android:layout_below="@id/button2"/>
+
+</RelativeLayout>
